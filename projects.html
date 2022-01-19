@@ -1,3 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+    <img src ="resources/Pictures/Mccs.png" width ="150" alt="MCCS LOGO">   
+    <h1 id = "text" >Foster Library Code Club</h1>
+</head>
+<style>
+        #mode-Button{
+            position:fixed;
+            right:10px;
+            top:10px;
+        }
+</style>
+<body>
+<button onclick="onModeButtonClick()" id = "mode-Button">
+Dark Mode
+</button>
+    <p id = "text">Here is a list of the projects we are working on.</p>
+    <ul id = "text">
+        <li><a  href="https://github.com/MCCS-Okinawa-Code-Club">Club Website</a></li>
+    </ul>
+    <script>
+
+    var textStuff = document.querySelectorAll("#text");
+    var modeButton = document.querySelectorAll("#mode-Button");
+    var darkMode = false;
+
+    var onModeButtonClick = function(){
+        if (darkMode === false){
+            darkMode = true;
+        }else{
+            darkMode = false;
+        }
+
+
+
+    switch(darkMode){
+
+       case true:
+        document.body.style.background = "black";
+    for(var i = 0; i < textStuff.length; i++){
+        textStuff[i].style.color = "limegreen";
+        };
+        document.getElementById("mode-Button").innerHTML = "Light Mode";
+        break;
+        case false:
+            document.body.style.background = "white";
+    for(var i = 0; i < textStuff.length; i++){
+        textStuff[i].style.color = "black";
+        };
+        document.getElementById("mode-Button").innerHTML = "Dark Mode";
+        break;
+
+    }
+
+
+    };
+
+
+
+    </script>
+</body>
+<footer>
+    <a href="index.html">Back to Home</a>
+</footer>
+</html>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,3 +133,4 @@ Dark Mode
     <a href="index.html">Back to Home</a>
 </footer>
 </html>
+
