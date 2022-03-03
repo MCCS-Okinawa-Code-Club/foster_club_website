@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+//NOTICE Whenever You Add A Text Elemnt Make Sure To Give It The "text" Id
 <html>
 <head>
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
@@ -7,6 +8,7 @@
     <h1 id = "text" >Foster Library Code Club</h1>
 </head>
 <style>
+//css for modeButton
         #mode-Button{
             position:fixed;
             right:10px;
@@ -14,6 +16,7 @@
         }
 </style>
 <body>
+//modeButton
 <button onclick="onModeButtonClick()" id = "mode-Button">
 Dark Mode
 </button>
@@ -22,22 +25,17 @@ Dark Mode
         <li><a  href="https://github.com/MCCS-Okinawa-Code-Club">Club Website</a></li>
     </ul>
     <script>
-
+//logic for modeButton
     var textStuff = document.querySelectorAll("#text");
     var modeButton = document.querySelectorAll("#mode-Button");
     var darkMode = false;
-
     var onModeButtonClick = function(){
         if (darkMode === false){
             darkMode = true;
         }else{
             darkMode = false;
         }
-
-
-
     switch(darkMode){
-
        case true:
         document.body.style.background = "black";
     for(var i = 0; i < textStuff.length; i++){
@@ -52,14 +50,8 @@ Dark Mode
         };
         document.getElementById("mode-Button").innerHTML = "Dark Mode";
         break;
-
     }
-
-
     };
-
-
-
     </script>
 </body>
 <footer>

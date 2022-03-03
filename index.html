@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+//NOTICE Whenever You Add A Text Elemnt Make Sure To Give It The "text" Id
 <html>
 <head>
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
@@ -12,6 +13,7 @@
 
 </head>
 <style>
+//css for modeButton
         #mode-Button{
             position:fixed;
             right:10px;
@@ -20,9 +22,18 @@
     </style>
 <body>
     <div id="nav">
+//modeButton
 <button onclick="onModeButtonClick()" id = "mode-Button">
 Dark Mode
 </button>
+
+//links
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="meeting_resources.html">Meeting Resources</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact_form.html">Join Us!</a></li>
+
         <ul id = "text">
             <li id = "text"><a href="index.html">Home</a></li>
             <li id = "text"><a href="meeting_resources.html">Meeting Resources</a></li>
@@ -37,22 +48,17 @@ Dark Mode
         </ul>
     </body>
     <script>
-//darkmode stuff
+//darkMode variables and if statements
 var textStuff = document.querySelectorAll("#text");
 var modeButton = document.querySelectorAll("#mode-Button");
 var darkMode = false;
-
 var onModeButtonClick = function(){
     if (darkMode === false){
         darkMode = true;
     }else{
         darkMode = false;
     }
-
-
-
 switch(darkMode){
-
    case true:
     document.body.style.background = "black";
 for(var i = 0; i < textStuff.length; i++){
@@ -67,10 +73,7 @@ for(var i = 0; i < textStuff.length; i++){
     };
     document.getElementById("mode-Button").innerHTML = "Dark Mode";
     break;
-
-}
-
-
+  }
 };
 
 
